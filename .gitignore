@@ -60,3 +60,5 @@ target/
 config_writer\.py
 
 phantomjs\.exe
+
+login\.ini
