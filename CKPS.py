@@ -33,13 +33,10 @@ pw = config['Credential']['pw']
 
 while 1:
 	for i in range(0, len(element1posList)):
-		print(i)
 		element1 = browser.find_element_by_xpath(element1posList[i]).text
 		element2 = browser.find_element_by_xpath(element2posList[i]).text
 		changes = float(element1)-float(element2)
-		print ('for range')
 		if changes < float(lower_bound_list[i]) or changes > float(upper_bound_list[i]):
-			print ('change hit')
 			emailServer = smtplib.SMTP('smtp.gmail.com', 587)
 			emailServer.ehlo()
 			emailServer.starttls()
